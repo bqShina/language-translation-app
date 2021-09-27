@@ -1,0 +1,18 @@
+{
+  "name": "language-translation-app",
+  "version": "1.0.0",
+  "description": "this is a language translattion app",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shina Qin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "langs": "^2.0.0",
+    "node-google-translate-skidz": "^1.1.2"
+  }
+}

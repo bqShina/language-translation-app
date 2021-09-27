@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translator</h1>
+        <p>Type anything you want to be translated</p>
+
+        
+        <form action="/" method="post">
+            <div class="translate-area">
+                <div class="lang">
+                    <select id="lang-one" name="langOne">
+                       <% for (let i = 0; i < allLangs.length; i++) {
+                         let selected = allLangs[i]['1'] === source ? 'selected' : ''; %> 
+                        <option value=<%= allLangs[i]['1'] %> <%= selected %> ><%= allLangs[i]['name']  %> </option>
+                        <% } %> 
+                    </select>
+                    <textarea name="lang1" cols="30" rows="8" placeholder="Enter text" required><%= text %></textarea>
+                </div>
+                <div class="lang">
+                    <select id="lang-two" name="langTwo">
+                        <% for (let i = 0; i < allLangs.length; i++) {
+                            let selected = allLangs[i]['1'] === target ? 'selected' : '';%> 
+                            <option value=<%= allLangs[i]['1'] %> <%= selected %> ><%= allLangs[i]['name']  %> </option>
+                        <% } %>
+                    </select>
+                    <textarea name="lang2" id="trans-result" cols="30" rows="8" placeholder="Translation" readonly><%= transResult %></textarea>
+                </div>
+            </div>            
+            <button type="submit">Translate</button>
+
+        </form>
+        
+        
+    
+    </div>
+    
+</body>
+</html>

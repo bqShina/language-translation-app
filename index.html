@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translator</h1>
+        <p>Type anything you want to be translated</p>
+
+        <form action="/" method="post">
+
+            <div class="lang">
+                <select id="lang-one" name="langOne">
+                    <option value="en">English</option>
+                    <option value="zh">Chinese (Simplified)</option>
+                </select>
+                <textarea name="lang1" cols="30" rows="10" placeholder="Enter text"></textarea>
+            </div>
+            <div class="lang">
+                <select id="lang-two" name="langTwo">
+                    <option value="en">English</option>
+                    <option value="zh" selected>Chinese (Simplified)</option>
+                </select>
+                <textarea name="lang2" id="trans-result" cols="30" rows="10" placeholder="Translation"></textarea>
+            </div>
+
+            <button type="submit">Translate</button>
+
+        </form>
+        
+        
+    
+    </div>
+    
+</body>
+</html>
